@@ -4,6 +4,7 @@ import { Todo } from './types';
 import TodoItem from './components/TodoItem';
 import CreateTodoForm from './components/CreateTodoForm';
 import { getStorageObject, setStorageObject } from './utils.ts/storage';
+import NoContent from './components/NoContent';
 
 
 const theme = createTheme({
@@ -49,6 +50,8 @@ function App() {
         padding={'16px'}
       >
         <CreateTodoForm onSubmit={addTodo} />
+        
+        {todos.length === 0 && <NoContent />}
         {todos.map((todo) => 
           <TodoItem 
             key={todo.id}
