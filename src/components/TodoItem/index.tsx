@@ -1,16 +1,16 @@
-import { Box, Button, Checkbox, Typography } from "@mui/material";
-import { memo } from "react"
-import { Todo } from "../../types";
+import { Box, Button, Checkbox, Typography } from '@mui/material';
+import { memo } from 'react';
+import { Todo } from '../../types';
 
 interface TodoItemProps {
-  todo: Todo,
-  onChecked: (id: string) => void,
-  onDelete: (id: string) => void,
+  todo: Todo;
+  onChecked: (id: string) => void;
+  onDelete: (id: string) => void;
 }
 
 const TodoItem = ({ todo, onChecked, onDelete }: TodoItemProps) => {
   return (
-    <Box 
+    <Box
       display={'flex'}
       width={'480px'}
       justifyContent={'space-between'}
@@ -21,7 +21,7 @@ const TodoItem = ({ todo, onChecked, onDelete }: TodoItemProps) => {
 
         <Typography>{todo.text}</Typography>
       </Box>
-      <Button 
+      <Button
         onClick={() => onDelete(todo.id)}
         variant="contained"
         color="error"
@@ -29,7 +29,7 @@ const TodoItem = ({ todo, onChecked, onDelete }: TodoItemProps) => {
         Delete
       </Button>
     </Box>
-  )
-}
+  );
+};
 
 export default memo(TodoItem);

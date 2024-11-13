@@ -22,45 +22,47 @@ function App() {
       setStorageObject('todos', todos);
     }
   }, [todos]);
-  
+
   const updateTodo = (todoId: string) => {
-    setTodos(prev => prev.map(todo =>
-      todo.id === todoId ? { ...todo, isDone: !todo.isDone } : todo
-    ));
+    setTodos((prev) =>
+      prev.map((todo) =>
+        todo.id === todoId ? { ...todo, isDone: !todo.isDone } : todo,
+      ),
+    );
   };
 
   const deleteTodo = (todoId: string) => {
-    setTodos(prev => prev.filter(todo => todo.id !== todoId));
+    setTodos((prev) => prev.filter((todo) => todo.id !== todoId));
   };
 
   const addTodo = (todo: Todo) => {
-    setTodos(prev => [...prev, todo]);
+    setTodos((prev) => [...prev, todo]);
   };
 
   return (
     <ThemeProvider theme={theme}>
-      <Box 
-        display={'flex'} 
+      <Box
+        display={'flex'}
         flexDirection={'column'}
-        justifyContent={'center'} 
+        justifyContent={'center'}
         alignItems={'center'}
-        width={'100vw'} 
+        width={'100vw'}
         padding={'16px'}
       >
         <CreateTodoForm onSubmit={addTodo} />
 
         {todos.length === 0 && <NoContent />}
-        {todos.map((todo) => 
-          <TodoItem 
+        {todos.map((todo) => (
+          <TodoItem
             key={todo.id}
             todo={todo}
             onChecked={updateTodo}
             onDelete={deleteTodo}
           />
-        )}
+        ))}
       </Box>
     </ThemeProvider>
-  )
+  );
 }
 
-export default App
+export default App;
