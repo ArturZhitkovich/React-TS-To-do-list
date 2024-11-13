@@ -35,21 +35,19 @@ A simple todo list application built with **React**, **TypeScript**, and **Vite*
 2. Install dependencies
 
    ```
-   yarn
+   npm install
    ```
 
 3. Run `dev` script
 
    ```
-   yarn dev
+   npm run dev
    ```
 
 4. That's it! ✅ Dev server running by default @ http://localhost:5173/
 
 ## Made using
 
-- [Yarn 1.x](https://yarnpkg.com/)
 - [Vite](https://vitejs.dev/)
 - [React](https://reactjs.org/)
 - [Typescript](https://www.typescriptlang.org/)
-- Icons by [`phosphos-icons`](https://phosphoricons.com/)
