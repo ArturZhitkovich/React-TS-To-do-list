@@ -6,7 +6,6 @@ import CreateTodoForm from './components/CreateTodoForm';
 import { getStorageObject, setStorageObject } from './utils.ts/storage';
 import NoContent from './components/NoContent';
 
-
 const theme = createTheme({
   palette: {
     primary: {
@@ -14,7 +13,6 @@ const theme = createTheme({
     },
   },
 });
-
 
 function App() {
   const [todos, setTodos] = useState<Todo[]>(getStorageObject('todos') ?? []);
@@ -50,7 +48,7 @@ function App() {
         padding={'16px'}
       >
         <CreateTodoForm onSubmit={addTodo} />
-        
+
         {todos.length === 0 && <NoContent />}
         {todos.map((todo) => 
           <TodoItem 
