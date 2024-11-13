@@ -14,13 +14,42 @@ A simple todo list application built with **React**, **TypeScript**, and **Vite*
 - Add, update, and delete todos.
 - Persist todos in `localStorage` to survive page reloads.
 
-## Getting Started
+## Requirements
 
-### Prerequisites
+- [Node.js LTS](https://nodejs.org/en/)
+- `npm` or [`yarn`](https://yarnpkg.com/)
+- [git](https://git-scm.com/)
 
-Make sure you have **Node.js** (version 14 or higher) installed on your machine.
+## How to run
 
-You can check your Node.js version by running:
+1. Clone the repo
 
-```bash
-node -v
+   ```bash
+   # Cloning with HTTPS
+   git clone https://github.com/ArturZhitkovich/React-TS-To-do-list.git
+
+   # Enter the working dir
+   cd React-TS-To-do-list
+   ```
+
+2. Install dependencies
+
+   ```
+   yarn
+   ```
+
+3. Run `dev` script
+
+   ```
+   yarn dev
+   ```
+
+4. That's it! ✅ Dev server running by default @ http://localhost:5173/
+
+## Made using
+
+- [Yarn 1.x](https://yarnpkg.com/)
+- [Vite](https://vitejs.dev/)
+- [React](https://reactjs.org/)
+- [Typescript](https://www.typescriptlang.org/)
+- Icons by [`phosphos-icons`](https://phosphoricons.com/)
