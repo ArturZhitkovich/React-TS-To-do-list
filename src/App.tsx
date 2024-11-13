@@ -18,9 +18,7 @@ function App() {
   const [todos, setTodos] = useState<Todo[]>(getStorageObject('todos') ?? []);
 
   useEffect(() => {
-    if (todos.length > 0) {
-      setStorageObject('todos', todos);
-    }
+    setStorageObject('todos', todos);
   }, [todos]);
 
   const updateTodo = (todoId: string) => {
